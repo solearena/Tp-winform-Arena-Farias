@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TpWinform_Arena_Farias
+namespace dominio
 {
-    class Articulo
+    public class Articulo
     {
         public string CodigoArticulo { get; set; }
         public string Nombre { get; set; }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TpWinform_Arena_Farias
+namespace dominio
 {
-    class Categoria
+    public class Categoria
     {
         public string Descripcion { get; set; }
     }

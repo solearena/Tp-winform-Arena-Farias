@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using dominio;
 
-namespace TpWinform_Arena_Farias
+namespace negocio
 {
-    class ArticuloService
+    public class ArticuloService
     {
         public List<Articulo> listar()
         {

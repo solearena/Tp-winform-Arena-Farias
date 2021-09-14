@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TpWinform_Arena_Farias
+namespace dominio
 {
-    class Marca
+    public class Marca
     {
         public string Descripcion  { get; set; }
     }
