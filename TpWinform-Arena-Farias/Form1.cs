@@ -39,7 +39,7 @@ namespace TpWinform_Arena_Farias
             {
                 pbxArticulo.Load(imagen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 pbxArticulo.Load("http://www.carsaludable.com.ar/wp-content/uploads/2014/03/default-placeholder.png");
             }
@@ -49,6 +49,13 @@ namespace TpWinform_Arena_Farias
         {
             Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.ImagenUrl);
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregar alta = new frmAgregar();
+            alta.ShowDialog();
+
         }
     }
 }

@@ -68,6 +68,7 @@ namespace TpWinform_Arena_Farias
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
