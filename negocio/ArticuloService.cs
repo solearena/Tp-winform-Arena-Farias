@@ -21,7 +21,7 @@ namespace negocio
             {
                 conexion.ConnectionString = "server =.\\SQLEXPRESS; database = CATALOGO_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT Codigo, Nombre, Descripcion, Precio, ImagenUrl FROM ARTICULOS";
+                comando.CommandText = "SELECT A.Codigo, A.Nombre, A.Descripcion, A.Precio, A.ImagenUrl, M.Descripcion AS Marca, C.Descripcion AS Categoria FROM ARTICULOS AS A, MARCAS AS M, CATEGORIAS AS C WHERE A.IdCategoria = C.Id AND A.IdMarca = M.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -35,6 +35,10 @@ namespace negocio
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Precio = (decimal)lector["Precio"]; //ver como sacar algunos decimales
                     aux.ImagenUrl = (string)lector["ImagenUrl"];
+                    aux.DescripcionMarca = new Marca();
+                    aux.DescripcionMarca.Descripcion = (string)lector["Marca"];
+                    aux.DescripcionCategoria = new Categoria();
+                    aux.DescripcionCategoria.Descripcion = (string)lector["Categoria"];
 
                     lista.Add(aux);
 
@@ -54,7 +58,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo,Nombre,Descripcion,Precio) VALUES ('" + art.CodigoArticulo + "','" + art.Nombre + "','" + art.Descripcion + "'," + art.Precio + ")");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo,Nombre,Descripcion,Precio, IdMarca, IdCategoria) VALUES ('" + art.CodigoArticulo + "','" + art.Nombre + "','" + art.Descripcion + "'," + art.Precio + ", @IdMarca, @IdCategoria)");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

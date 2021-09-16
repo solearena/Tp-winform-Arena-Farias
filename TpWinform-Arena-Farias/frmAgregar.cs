@@ -36,6 +36,8 @@ namespace TpWinform_Arena_Farias
                 art.Nombre = txtNombre.Text;
                 art.Descripcion = txtDescripcion.Text;
                 art.Precio = decimal.Parse(txtPrecio.Text);
+                art.DescripcionMarca = (Marca)cboMarca.SelectedItem;
+                art.DescripcionCategoria = (Categoria)cboCategoria.SelectedItem;
                 negocio.agregar(art);
                 MessageBox.Show("Agregado Excitosamente");
                 Close();
@@ -43,10 +45,23 @@ namespace TpWinform_Arena_Farias
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
             
+        }
+
+        private void frmAgregar_Load(object sender, EventArgs e)
+        {
+            MarcaService marcaService = new MarcaService();
+            try
+            {
+                cboMarca.DataSource = marcaService.listar();
+                //cboCategoria.DataSource = descripcionService.listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

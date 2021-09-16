@@ -39,10 +39,10 @@ namespace TpWinform_Arena_Farias
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.uadMarca = new System.Windows.Forms.DomainUpDown();
-            this.uadCategoria = new System.Windows.Forms.DomainUpDown();
             this.btnAgregar2 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -127,22 +127,6 @@ namespace TpWinform_Arena_Farias
             this.txtPrecio.Size = new System.Drawing.Size(120, 20);
             this.txtPrecio.TabIndex = 9;
             // 
-            // uadMarca
-            // 
-            this.uadMarca.Location = new System.Drawing.Point(135, 166);
-            this.uadMarca.Name = "uadMarca";
-            this.uadMarca.Size = new System.Drawing.Size(120, 20);
-            this.uadMarca.TabIndex = 10;
-            this.uadMarca.Text = "domainUpDown1";
-            // 
-            // uadCategoria
-            // 
-            this.uadCategoria.Location = new System.Drawing.Point(135, 196);
-            this.uadCategoria.Name = "uadCategoria";
-            this.uadCategoria.Size = new System.Drawing.Size(120, 20);
-            this.uadCategoria.TabIndex = 11;
-            this.uadCategoria.Text = "domainUpDown2";
-            // 
             // btnAgregar2
             // 
             this.btnAgregar2.Location = new System.Drawing.Point(40, 263);
@@ -163,15 +147,33 @@ namespace TpWinform_Arena_Farias
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // cboMarca
+            // 
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(134, 166);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(121, 21);
+            this.cboMarca.TabIndex = 14;
+            // 
+            // cboCategoria
+            // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(134, 196);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cboCategoria.TabIndex = 15;
+            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(329, 338);
+            this.Controls.Add(this.cboCategoria);
+            this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar2);
-            this.Controls.Add(this.uadCategoria);
-            this.Controls.Add(this.uadMarca);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
@@ -184,6 +186,7 @@ namespace TpWinform_Arena_Farias
             this.Controls.Add(this.label1);
             this.Name = "frmAgregar";
             this.Text = "Agregar Articulo";
+            this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,9 +204,9 @@ namespace TpWinform_Arena_Farias
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.DomainUpDown uadMarca;
-        private System.Windows.Forms.DomainUpDown uadCategoria;
         private System.Windows.Forms.Button btnAgregar2;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.ComboBox cboCategoria;
     }
 }
