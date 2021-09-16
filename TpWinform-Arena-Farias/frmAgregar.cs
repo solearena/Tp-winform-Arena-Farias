@@ -53,10 +53,11 @@ namespace TpWinform_Arena_Farias
         private void frmAgregar_Load(object sender, EventArgs e)
         {
             MarcaService marcaService = new MarcaService();
+            CategoriaService categoriaService = new CategoriaService();
             try
             {
                 cboMarca.DataSource = marcaService.listar();
-                //cboCategoria.DataSource = descripcionService.listar();
+                cboCategoria.DataSource = categoriaService.listar();
             }
             catch (Exception ex)
             {
