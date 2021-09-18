@@ -20,17 +20,28 @@ namespace TpWinform_Arena_Farias
             InitializeComponent();
         }
 
+        private void cargar()
+        {
+            ArticuloService service = new ArticuloService();
+            try
+            {
+                listaArticulo = service.listar();
+                dgvArticulo.DataSource = service.listar();
+                dgvArticulo.Columns["ImagenUrl"].Visible = false;
+                cargarImagen(listaArticulo[0].ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            ArticuloService service = new ArticuloService();
-            listaArticulo = service.listar();
-            dgvArticulo.DataSource = service.listar();
-            dgvArticulo.Columns["ImagenUrl"].Visible = false;
-            cargarImagen(listaArticulo[0].ImagenUrl);
+            cargar();
         }
 
         private void cargarImagen(string imagen)
@@ -55,7 +66,7 @@ namespace TpWinform_Arena_Farias
         {
             frmAgregar alta = new frmAgregar();
             alta.ShowDialog();
-
+            cargar();
         }
     }
 }

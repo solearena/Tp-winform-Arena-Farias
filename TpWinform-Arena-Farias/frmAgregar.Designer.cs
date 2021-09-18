@@ -43,6 +43,10 @@ namespace TpWinform_Arena_Farias
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.txtUrlImagen = new System.Windows.Forms.TextBox();
+            this.lblUrlImagen = new System.Windows.Forms.Label();
+            this.pbxImagen2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +88,7 @@ namespace TpWinform_Arena_Farias
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 166);
+            this.label5.Location = new System.Drawing.Point(46, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 4;
@@ -93,7 +97,7 @@ namespace TpWinform_Arena_Farias
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 196);
+            this.label6.Location = new System.Drawing.Point(46, 221);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 5;
@@ -122,7 +126,7 @@ namespace TpWinform_Arena_Farias
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(135, 135);
+            this.txtPrecio.Location = new System.Drawing.Point(134, 135);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(120, 20);
             this.txtPrecio.TabIndex = 9;
@@ -151,7 +155,7 @@ namespace TpWinform_Arena_Farias
             // 
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(134, 166);
+            this.cboMarca.Location = new System.Drawing.Point(134, 191);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
             this.cboMarca.TabIndex = 14;
@@ -160,16 +164,44 @@ namespace TpWinform_Arena_Farias
             // 
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(134, 196);
+            this.cboCategoria.Location = new System.Drawing.Point(134, 221);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 15;
+            // 
+            // txtUrlImagen
+            // 
+            this.txtUrlImagen.Location = new System.Drawing.Point(134, 162);
+            this.txtUrlImagen.Name = "txtUrlImagen";
+            this.txtUrlImagen.Size = new System.Drawing.Size(120, 20);
+            this.txtUrlImagen.TabIndex = 17;
+            // 
+            // lblUrlImagen
+            // 
+            this.lblUrlImagen.AutoSize = true;
+            this.lblUrlImagen.Location = new System.Drawing.Point(46, 162);
+            this.lblUrlImagen.Name = "lblUrlImagen";
+            this.lblUrlImagen.Size = new System.Drawing.Size(74, 13);
+            this.lblUrlImagen.TabIndex = 16;
+            this.lblUrlImagen.Text = "URL IMAGEN";
+            // 
+            // pbxImagen2
+            // 
+            this.pbxImagen2.Location = new System.Drawing.Point(339, 40);
+            this.pbxImagen2.Name = "pbxImagen2";
+            this.pbxImagen2.Size = new System.Drawing.Size(238, 202);
+            this.pbxImagen2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImagen2.TabIndex = 18;
+            this.pbxImagen2.TabStop = false;
             // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 338);
+            this.ClientSize = new System.Drawing.Size(611, 338);
+            this.Controls.Add(this.pbxImagen2);
+            this.Controls.Add(this.txtUrlImagen);
+            this.Controls.Add(this.lblUrlImagen);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.btnCancelar);
@@ -187,6 +219,7 @@ namespace TpWinform_Arena_Farias
             this.Name = "frmAgregar";
             this.Text = "Agregar Articulo";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +241,8 @@ namespace TpWinform_Arena_Farias
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.TextBox txtUrlImagen;
+        private System.Windows.Forms.Label lblUrlImagen;
+        private System.Windows.Forms.PictureBox pbxImagen2;
     }
 }
