@@ -108,36 +108,36 @@ namespace TpWinform_Arena_Farias
             this.txtCodigo.Location = new System.Drawing.Point(135, 40);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(120, 20);
-            this.txtCodigo.TabIndex = 6;
+            this.txtCodigo.TabIndex = 0;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(135, 71);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(120, 20);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(135, 105);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(120, 20);
-            this.txtDescripcion.TabIndex = 8;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(134, 135);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(120, 20);
-            this.txtPrecio.TabIndex = 9;
+            this.txtPrecio.TabIndex = 3;
             // 
             // btnAgregar2
             // 
             this.btnAgregar2.Location = new System.Drawing.Point(40, 263);
             this.btnAgregar2.Name = "btnAgregar2";
             this.btnAgregar2.Size = new System.Drawing.Size(104, 35);
-            this.btnAgregar2.TabIndex = 12;
-            this.btnAgregar2.Text = "Agregar";
+            this.btnAgregar2.TabIndex = 7;
+            this.btnAgregar2.Text = "Aceptar";
             this.btnAgregar2.UseVisualStyleBackColor = true;
             this.btnAgregar2.Click += new System.EventHandler(this.btnAgregar2_Click);
             // 
@@ -146,7 +146,7 @@ namespace TpWinform_Arena_Farias
             this.btnCancelar.Location = new System.Drawing.Point(190, 263);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 35);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -158,7 +158,7 @@ namespace TpWinform_Arena_Farias
             this.cboMarca.Location = new System.Drawing.Point(134, 191);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
-            this.cboMarca.TabIndex = 14;
+            this.cboMarca.TabIndex = 5;
             // 
             // cboCategoria
             // 
@@ -167,14 +167,14 @@ namespace TpWinform_Arena_Farias
             this.cboCategoria.Location = new System.Drawing.Point(134, 221);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cboCategoria.TabIndex = 15;
+            this.cboCategoria.TabIndex = 6;
             // 
             // txtUrlImagen
             // 
             this.txtUrlImagen.Location = new System.Drawing.Point(134, 162);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(120, 20);
-            this.txtUrlImagen.TabIndex = 17;
+            this.txtUrlImagen.TabIndex = 4;
             // 
             // lblUrlImagen
             // 

@@ -34,7 +34,11 @@ namespace negocio
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Precio = (decimal)lector["Precio"]; //ver como sacar algunos decimales
-                    aux.ImagenUrl = (string)lector["ImagenUrl"];
+                    if (!(lector["ImagenUrl"] is DBNull))
+                    {
+                        aux.ImagenUrl = (string)lector["ImagenUrl"];
+
+                    }
                     aux.DescripcionMarca = new Marca();
                     aux.DescripcionMarca.Descripcion = (string)lector["Marca"];
                     aux.DescripcionCategoria = new Categoria();
@@ -59,12 +63,18 @@ namespace negocio
             try
             {
                 datos.setearConsulta("INSERT INTO ARTICULOS (Codigo,Nombre,Descripcion,Precio, IdMarca, IdCategoria) VALUES ('" + art.CodigoArticulo + "','" + art.Nombre + "','" + art.Descripcion + "'," + art.Precio + ", @IdMarca, @IdCategoria)");
+                datos.setearParametro("@IdMarca",art.DescripcionMarca.Id);
+                datos.setearParametro("@IdCategoria", art.DescripcionCategoria.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
 
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

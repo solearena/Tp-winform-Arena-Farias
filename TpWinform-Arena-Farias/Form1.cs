@@ -37,6 +37,7 @@ namespace TpWinform_Arena_Farias
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -67,6 +68,16 @@ namespace TpWinform_Arena_Farias
             frmAgregar alta = new frmAgregar();
             alta.ShowDialog();
             cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = new Articulo();
+            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            frmAgregar modificar = new frmAgregar(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+
         }
     }
 }

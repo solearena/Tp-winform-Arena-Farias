@@ -78,6 +78,7 @@ namespace TpWinform_Arena_Farias
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 

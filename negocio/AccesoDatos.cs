@@ -54,8 +54,13 @@ namespace negocio
                 throw ex;
             }
         }
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+            
+        }
 
-        public void cerrarConexion()
+        public void cerrarConexion() //fijarse porque nos da null el lector ERROR
         {
             if(lector != null)
             {

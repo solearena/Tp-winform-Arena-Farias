@@ -15,9 +15,16 @@ namespace TpWinform_Arena_Farias
 {
     public partial class frmAgregar : Form
     {
+        private Articulo articulo = null;
         public frmAgregar()
         {
             InitializeComponent();
+        }
+        public frmAgregar(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -27,19 +34,24 @@ namespace TpWinform_Arena_Farias
 
         private void btnAgregar2_Click(object sender, EventArgs e)
         {
-            Articulo art = new Articulo();
             ArticuloService negocio = new ArticuloService();
 
             try
             {
-                art.CodigoArticulo = txtCodigo.Text;
-                art.Nombre = txtNombre.Text;
-                art.Descripcion = txtDescripcion.Text;
-                art.Precio = decimal.Parse(txtPrecio.Text);
-                art.DescripcionMarca = (Marca)cboMarca.SelectedItem;
-                art.DescripcionCategoria = (Categoria)cboCategoria.SelectedItem;
-                negocio.agregar(art);
-                MessageBox.Show("Agregado Excitosamente");
+                if(articulo == null)
+                {
+                    articulo = new Articulo();
+                }
+                articulo.Nombre = txtNombre.Text;
+                articulo.CodigoArticulo = txtCodigo.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.Precio = decimal.Parse(txtPrecio.Text);
+                articulo.ImagenUrl = txtUrlImagen.Text;
+                articulo.DescripcionMarca = (Marca)cboMarca.SelectedItem;
+                articulo.DescripcionCategoria = (Categoria)cboCategoria.SelectedItem;
+                //if(articulo.)
+                negocio.agregar(articulo);
+                MessageBox.Show("Agregado Exitosamente");
                 Close();
 
             }
@@ -57,11 +69,39 @@ namespace TpWinform_Arena_Farias
             try
             {
                 cboMarca.DataSource = marcaService.listar();
+                cboMarca.ValueMember = "Id";
+                cboMarca.DisplayMember = "Descripcion";
                 cboCategoria.DataSource = categoriaService.listar();
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Descripcion";
+                if(articulo != null)
+                {
+                    txtCodigo.Text = articulo.CodigoArticulo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    txtPrecio.Text = articulo.Precio.ToString();
+                    txtUrlImagen.Text = articulo.ImagenUrl;
+                    cargarImagen(articulo.ImagenUrl);
+                    cboMarca.SelectedValue = articulo.DescripcionMarca.Id;
+                    cboCategoria.SelectedValue = articulo.DescripcionCategoria.Id;
+                }
+
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxImagen2.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxImagen2.Load("http://www.carsaludable.com.ar/wp-content/uploads/2014/03/default-placeholder.png");
             }
         }
     }
