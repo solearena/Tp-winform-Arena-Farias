@@ -74,15 +74,16 @@ namespace TpWinform_Arena_Farias
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Articulo seleccionado = new Articulo();
+                Articulo seleccionado = new Articulo();
+                
             try
             {
-                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //ver como hacer para que vaya al catch
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //arreglado con el System.NullReferenceException
                 frmAgregar modificar = new frmAgregar(seleccionado);
                 modificar.ShowDialog();
                 cargar();
             }
-            catch (Exception)
+            catch (System.NullReferenceException)
             {
                 MessageBox.Show("ERROR: Listar articulos");
             }

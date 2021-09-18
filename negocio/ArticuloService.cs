@@ -27,7 +27,7 @@ namespace negocio
                 conexion.Open();
                 lector = comando.ExecuteReader();
 
-                while (lector.Read())
+                while (lector.Read()) //A CORREGIR -- PROBLEMA CON LOS 3 ID CON MISMO NOMBRE
                 {
                     Articulo aux = new Articulo();
                     aux.Id = (int)lector["Id"];

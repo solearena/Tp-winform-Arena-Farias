@@ -111,7 +111,7 @@ namespace TpWinform_Arena_Farias
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(607, 37);
+            this.pbxArticulo.Location = new System.Drawing.Point(630, 12);
             this.pbxArticulo.Name = "pbxArticulo";
             this.pbxArticulo.Size = new System.Drawing.Size(417, 380);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
