@@ -49,9 +49,17 @@ namespace TpWinform_Arena_Farias
                 articulo.ImagenUrl = txtUrlImagen.Text;
                 articulo.DescripcionMarca = (Marca)cboMarca.SelectedItem;
                 articulo.DescripcionCategoria = (Categoria)cboCategoria.SelectedItem;
-                //if(articulo.)
-                negocio.agregar(articulo);
-                MessageBox.Show("Agregado Exitosamente");
+
+                if(articulo.Id != 0)
+                {
+                    //negocio.mo
+                    MessageBox.Show("Modificado Exitosamente");
+                }
+                else
+                {
+                    negocio.agregar(articulo);
+                    MessageBox.Show("Agregado Exitosamente");
+                }
                 Close();
 
             }
@@ -84,9 +92,7 @@ namespace TpWinform_Arena_Farias
                     cargarImagen(articulo.ImagenUrl);
                     cboMarca.SelectedValue = articulo.DescripcionMarca.Id;
                     cboCategoria.SelectedValue = articulo.DescripcionCategoria.Id;
-                }
-
-                
+                }  
             }
             catch (Exception ex)
             {

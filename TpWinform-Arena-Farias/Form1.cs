@@ -28,6 +28,8 @@ namespace TpWinform_Arena_Farias
                 listaArticulo = service.listar();
                 dgvArticulo.DataSource = service.listar();
                 dgvArticulo.Columns["ImagenUrl"].Visible = false;
+                dgvArticulo.Columns["Id"].Visible = false;
+                dgvArticulo.Columns["Descripcion"].Visible = false;
                 cargarImagen(listaArticulo[0].ImagenUrl);
             }
             catch (Exception ex)
@@ -73,10 +75,17 @@ namespace TpWinform_Arena_Farias
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Articulo seleccionado = new Articulo();
-            seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            frmAgregar modificar = new frmAgregar(seleccionado);
-            modificar.ShowDialog();
-            cargar();
+            try
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //ver como hacer para que vaya al catch
+                frmAgregar modificar = new frmAgregar(seleccionado);
+                modificar.ShowDialog();
+                cargar();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR: Listar articulos");
+            }
 
         }
     }
