@@ -52,7 +52,7 @@ namespace TpWinform_Arena_Farias
 
                 if(articulo.Id != 0)
                 {
-                    //negocio.mo
+                    negocio.modificar(articulo);
                     MessageBox.Show("Modificado Exitosamente");
                 }
                 else

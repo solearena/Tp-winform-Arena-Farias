@@ -63,10 +63,9 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo,Nombre,Descripcion,Precio, IdMarca, IdCategoria, Id) VALUES ('" + art.CodigoArticulo + "','" + art.Nombre + "','" + art.Descripcion + "'," + art.Precio + ", @IdMarca, @IdCategoria, @Id)");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo,Nombre,Descripcion,Precio, IdMarca, IdCategoria) VALUES ('" + art.CodigoArticulo + "','" + art.Nombre + "','" + art.Descripcion + "'," + art.Precio + ", @IdMarca, @IdCategoria)");
                 datos.setearParametro("@IdMarca",art.DescripcionMarca.Id);
                 datos.setearParametro("@IdCategoria", art.DescripcionCategoria.Id);
-                datos.setearParametro("@Id", art.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -90,9 +89,9 @@ namespace negocio
                 datos.setearParametro("@descripcion", art.Descripcion);
                 datos.setearParametro("@precio", art.Precio);
                 datos.setearParametro("@img", art.ImagenUrl);
-                datos.setearParametro("@idMarca", art.DescripcionMarca.Id);
+                datos.setearParametro("@idMarca", art.DescripcionMarca.Id); //ver error 
                 datos.setearParametro("@idCategoria", art.DescripcionCategoria.Id);
-
+                datos.setearParametro("@id", art.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

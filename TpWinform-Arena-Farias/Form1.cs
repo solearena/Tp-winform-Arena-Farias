@@ -26,7 +26,7 @@ namespace TpWinform_Arena_Farias
             try
             {
                 listaArticulo = service.listar();
-                dgvArticulo.DataSource = service.listar();
+                dgvArticulo.DataSource = listaArticulo;
                 dgvArticulo.Columns["ImagenUrl"].Visible = false;
                 dgvArticulo.Columns["Id"].Visible = false;
                 dgvArticulo.Columns["Descripcion"].Visible = false;

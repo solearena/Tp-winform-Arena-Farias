@@ -60,13 +60,13 @@ namespace negocio
             
         }
 
-        public void cerrarConexion() //fijarse porque nos da null el lector ERROR
+        public void cerrarConexion() 
         {
             if(lector != null)
             {
                 lector.Close();
             }
-            lector.Close();
+            conexion.Close();
         }
     }
 }
