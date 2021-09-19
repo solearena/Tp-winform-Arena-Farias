@@ -28,14 +28,14 @@ namespace TpWinform_Arena_Farias
         
         private void cargarImagen(string imagen)
         {
-            /*try
+            try
             {
-                pbxDetalle.Load(imagen);
+                pbxImagen2.Load(imagen);
             }
             catch (Exception)
             {
-                pbxArticulo.Load("http://www.carsaludable.com.ar/wp-content/uploads/2014/03/default-placeholder.png");
-            }*/
+                pbxImagen2.Load("http://www.carsaludable.com.ar/wp-content/uploads/2014/03/default-placeholder.png");
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -45,7 +45,8 @@ namespace TpWinform_Arena_Farias
 
         private void FormDetalle_Load(object sender, EventArgs e)
         {
-            ArticuloService negocio = new ArticuloService();
+            MarcaService marcaService = new MarcaService();
+            CategoriaService categoriaService = new CategoriaService();
             try
             {
                 if (articulo != null)
@@ -56,15 +57,19 @@ namespace TpWinform_Arena_Farias
                     txtPrecio.Text = articulo.Precio.ToString();
                     txtUrlImagen.Text = articulo.ImagenUrl;
                     cargarImagen(articulo.ImagenUrl);
-                    //txtMarca.Text = articulo.DescripcionMarca.Id;
-                    //cboCategoria.SelectedValue = articulo.DescripcionCategoria.Id;
+                    txtMarca.Text = articulo.DescripcionMarca.Descripcion;
+                    txtCategoria.Text = articulo.DescripcionCategoria.Descripcion;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            Close();
+        }
+
+        private void pbxImagen2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

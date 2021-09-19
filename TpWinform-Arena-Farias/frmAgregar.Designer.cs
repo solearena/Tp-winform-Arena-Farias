@@ -198,6 +198,7 @@ namespace TpWinform_Arena_Farias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(611, 338);
             this.Controls.Add(this.pbxImagen2);
             this.Controls.Add(this.txtUrlImagen);
@@ -216,6 +217,7 @@ namespace TpWinform_Arena_Farias
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "frmAgregar";
             this.Text = "Agregar Articulo";
             this.Load += new System.EventHandler(this.frmAgregar_Load);

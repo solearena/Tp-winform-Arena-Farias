@@ -66,6 +66,7 @@ namespace TpWinform_Arena_Farias
             this.pbxImagen2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagen2.TabIndex = 35;
             this.pbxImagen2.TabStop = false;
+            this.pbxImagen2.Click += new System.EventHandler(this.pbxImagen2_Click);
             // 
             // txtUrlImagen
             // 
@@ -183,6 +184,7 @@ namespace TpWinform_Arena_Farias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(758, 325);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtMarca);
