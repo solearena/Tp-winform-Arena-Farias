@@ -34,7 +34,7 @@ namespace TpWinform_Arena_Farias
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnDescripción = new System.Windows.Forms.Button();
+            this.btnDetalle = new System.Windows.Forms.Button();
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
@@ -89,14 +89,15 @@ namespace TpWinform_Arena_Farias
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // btnDescripción
+            // btnDetalle
             // 
-            this.btnDescripción.Location = new System.Drawing.Point(301, 224);
-            this.btnDescripción.Name = "btnDescripción";
-            this.btnDescripción.Size = new System.Drawing.Size(154, 55);
-            this.btnDescripción.TabIndex = 5;
-            this.btnDescripción.Text = "DESCRIPCIÓN";
-            this.btnDescripción.UseVisualStyleBackColor = true;
+            this.btnDetalle.Location = new System.Drawing.Point(301, 224);
+            this.btnDetalle.Name = "btnDetalle";
+            this.btnDetalle.Size = new System.Drawing.Size(154, 55);
+            this.btnDetalle.TabIndex = 5;
+            this.btnDetalle.Text = "DETALLE";
+            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // dgvArticulo
             // 
@@ -122,10 +123,11 @@ namespace TpWinform_Arena_Farias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1081, 488);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvArticulo);
-            this.Controls.Add(this.btnDescripción);
+            this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -147,7 +149,7 @@ namespace TpWinform_Arena_Farias
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnDescripción;
+        private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.DataGridView dgvArticulo;
         private System.Windows.Forms.PictureBox pbxArticulo;
     }

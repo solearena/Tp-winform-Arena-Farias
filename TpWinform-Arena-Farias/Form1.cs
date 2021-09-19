@@ -89,5 +89,22 @@ namespace TpWinform_Arena_Farias
             }
 
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = new Articulo();
+
+            try
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //arreglado con el System.NullReferenceException
+                FormDetalle detalle = new FormDetalle(seleccionado);
+                detalle.ShowDialog();
+                cargar();
+            }
+            catch (System.NullReferenceException)
+            {
+                MessageBox.Show("ERROR: Listar articulos");
+            }
+        }
     }
 }

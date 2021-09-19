@@ -21,7 +21,7 @@ namespace negocio
             {
                 conexion.ConnectionString = "server =.\\SQLEXPRESS; database = CATALOGO_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Codigo, A.Nombre, A.Descripcion, A.Precio, A.ImagenUrl, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Id, M.Id, C.Id FROM ARTICULOS AS A, MARCAS AS M, CATEGORIAS AS C WHERE A.IdCategoria = C.Id AND A.IdMarca = M.Id";
+                comando.CommandText = "SELECT ar.Id,ar.Codigo,ar.Nombre,ar.Descripcion,ar.ImagenUrl,ar.Precio,ma.Id as IdMarca,ma.Descripcion as Marca, ca.Id as IdCategoria,ca.Descripcion as Categoria from Articulos ar inner join Marcas ma on ar.IdMarca = ma.Id inner join Categorias ca on ar.IdCategoria = ca.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -34,16 +34,16 @@ namespace negocio
                     aux.CodigoArticulo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    aux.Precio = (decimal)lector["Precio"]; //ver como sacar algunos decimales
+                    aux.Precio = Math.Round((decimal)lector["Precio"],2); 
                     if (!(lector["ImagenUrl"] is DBNull))
                     {
                         aux.ImagenUrl = (string)lector["ImagenUrl"];
                     }
                     aux.DescripcionMarca = new Marca();
-                    aux.DescripcionMarca.Id = (int)lector["Id"];
+                    aux.DescripcionMarca.Id = (int)lector["IdMarca"];
                     aux.DescripcionMarca.Descripcion = (string)lector["Marca"];
                     aux.DescripcionCategoria = new Categoria();
-                    aux.DescripcionCategoria.Id = (int)lector["Id"];
+                    aux.DescripcionCategoria.Id = (int)lector["IdCategoria"];
                     aux.DescripcionCategoria.Descripcion = (string)lector["Categoria"];
                     lista.Add(aux);
 
@@ -83,7 +83,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, Precio = @precio, UrlImagen = @img, IdMarca = @idMarca, IdCategoria = @idCategoria WHERE Id = @id");
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, Precio = @precio, ImagenUrl = @img, IdMarca = @idMarca, IdCategoria = @idCategoria WHERE Id = @id");
                 datos.setearParametro("@codigo", art.CodigoArticulo);
                 datos.setearParametro("@nombre", art.Nombre);
                 datos.setearParametro("@descripcion", art.Descripcion);

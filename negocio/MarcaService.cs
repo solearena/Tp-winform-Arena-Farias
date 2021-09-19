@@ -17,6 +17,7 @@ namespace negocio
             {
                 datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
                 datos.ejecutarLectura();
+
                 while (datos.Lector.Read())
                 {
                     Marca aux = new Marca();
@@ -30,6 +31,10 @@ namespace negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }
