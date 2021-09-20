@@ -147,7 +147,7 @@ namespace TpWinform_Arena_Farias
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "DESCRIPCION";
+            this.label3.Text = "DESCRIPCIÓN";
             // 
             // label2
             // 
@@ -167,7 +167,7 @@ namespace TpWinform_Arena_Farias
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 19;
-            this.label1.Text = "CODIGO";
+            this.label1.Text = "CÓDIGO";
             // 
             // txtCategoria
             // 

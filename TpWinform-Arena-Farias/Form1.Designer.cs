@@ -38,6 +38,7 @@ namespace TpWinform_Arena_Farias
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnBuscarCod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
@@ -54,11 +55,11 @@ namespace TpWinform_Arena_Farias
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(77, 121);
+            this.btnBuscar.Location = new System.Drawing.Point(77, 130);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(154, 55);
             this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Text = "BUSCAR POR ID";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -84,7 +85,7 @@ namespace TpWinform_Arena_Farias
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(301, 121);
+            this.btnEliminar.Location = new System.Drawing.Point(630, 421);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(154, 55);
             this.btnEliminar.TabIndex = 4;
@@ -132,12 +133,23 @@ namespace TpWinform_Arena_Farias
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnBuscarCod
+            // 
+            this.btnBuscarCod.Location = new System.Drawing.Point(301, 130);
+            this.btnBuscarCod.Name = "btnBuscarCod";
+            this.btnBuscarCod.Size = new System.Drawing.Size(154, 55);
+            this.btnBuscarCod.TabIndex = 9;
+            this.btnBuscarCod.Text = "BUSCAR POR CÓDIGO";
+            this.btnBuscarCod.UseVisualStyleBackColor = true;
+            this.btnBuscarCod.Click += new System.EventHandler(this.btnBuscarCod_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1081, 488);
+            this.Controls.Add(this.btnBuscarCod);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvArticulo);
@@ -167,6 +179,7 @@ namespace TpWinform_Arena_Farias
         private System.Windows.Forms.DataGridView dgvArticulo;
         private System.Windows.Forms.PictureBox pbxArticulo;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnBuscarCod;
     }
 }
 

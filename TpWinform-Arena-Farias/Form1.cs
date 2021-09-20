@@ -146,5 +146,19 @@ namespace TpWinform_Arena_Farias
                 cargar();
             }
         }
+
+        private void btnBuscarCod_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmBuscarPorCod detalle = new frmBuscarPorCod();
+                detalle.ShowDialog();
+                cargar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
     }
 }
