@@ -60,6 +60,10 @@ namespace TpWinform_Arena_Farias
                     txtMarca.Text = articulo.DescripcionMarca.Descripcion;
                     txtCategoria.Text = articulo.DescripcionCategoria.Descripcion;
                 }
+                else
+                {
+                    Close();
+                }
             }
             catch (Exception ex)
             {

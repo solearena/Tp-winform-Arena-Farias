@@ -83,35 +83,33 @@ namespace TpWinform_Arena_Farias
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-                Articulo seleccionado = new Articulo();
-                
-            try
+            Articulo seleccionado = new Articulo();
+            if (dgvArticulo.CurrentRow == null)
             {
-                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //arreglado con el System.NullReferenceException
+                MessageBox.Show("NO SELECCIONASTE UN ARTICULO");
+            }
+            else
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
                 frmAgregar modificar = new frmAgregar(seleccionado);
                 modificar.ShowDialog();
                 cargar();
-            }
-            catch (System.NullReferenceException)
-            {
-                MessageBox.Show("ERROR: Listar articulos");
             }
 
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
-
-            try
+            if (dgvArticulo.CurrentRow == null)
             {
-                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //arreglado con el System.NullReferenceException
+                MessageBox.Show("NO SELECCIONASTE UN ARTICULO");
+            }
+            else
+            {
+                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
                 FormDetalle detalle = new FormDetalle(seleccionado);
                 detalle.ShowDialog();
                 cargar();
-            }
-            catch (System.NullReferenceException)
-            {
-                MessageBox.Show("ERROR");
             }
         }
 
@@ -123,7 +121,7 @@ namespace TpWinform_Arena_Farias
                 detalle.ShowDialog();
                 cargar();
             }
-            catch (System.NullReferenceException)
+            catch (Exception)
             {
                 MessageBox.Show("ERROR");
             }
@@ -137,15 +135,15 @@ namespace TpWinform_Arena_Farias
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             ArticuloService service = new ArticuloService();
-            try
+            if (dgvArticulo.CurrentRow == null)
+            {
+                MessageBox.Show("NO SELECCIONASTE UN ARTICULO");
+            }
+            else
             {
                 Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //arreglado con el System.NullReferenceExcepti
                 service.eliminar(seleccionado);
                 cargar();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("ERROR");
             }
         }
     }

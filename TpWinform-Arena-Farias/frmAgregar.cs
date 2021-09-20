@@ -42,6 +42,7 @@ namespace TpWinform_Arena_Farias
                 {
                     articulo = new Articulo();
                 }
+
                 articulo.Nombre = txtNombre.Text;
                 articulo.CodigoArticulo = txtCodigo.Text;
                 articulo.Descripcion = txtDescripcion.Text;

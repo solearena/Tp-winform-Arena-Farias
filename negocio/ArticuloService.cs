@@ -81,7 +81,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo,Nombre,Descripcion,Precio, IdMarca, IdCategoria) VALUES ('" + art.CodigoArticulo + "','" + art.Nombre + "','" + art.Descripcion + "'," + art.Precio + ", @IdMarca, @IdCategoria)");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo,Nombre,Descripcion,Precio,ImagenUrl, IdMarca, IdCategoria) VALUES ('" + art.CodigoArticulo + "','" + art.Nombre + "','" + art.Descripcion + "','" + art.Precio + "','" + art.ImagenUrl + "', @IdMarca, @IdCategoria)");
                 datos.setearParametro("@IdMarca",art.DescripcionMarca.Id);
                 datos.setearParametro("@IdCategoria", art.DescripcionCategoria.Id);
                 datos.ejecutarAccion();

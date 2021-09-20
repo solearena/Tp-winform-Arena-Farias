@@ -84,6 +84,7 @@ namespace TpWinform_Arena_Farias
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmBuscar";
             this.Text = "Buscar";
+            this.Load += new System.EventHandler(this.frmBuscar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

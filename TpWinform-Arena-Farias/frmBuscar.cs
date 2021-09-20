@@ -25,7 +25,7 @@ namespace TpWinform_Arena_Farias
         {
             Close();
         }
-
+       
         private void cargar(int id)
         {
             ArticuloService service = new ArticuloService();
@@ -48,7 +48,7 @@ namespace TpWinform_Arena_Farias
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("NO EXISTE EL ID A BUSCAR");
             }
         }
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -60,6 +60,11 @@ namespace TpWinform_Arena_Farias
             //negocio.buscar(articulo.Id);
             FormDetalle detalle = new FormDetalle(articulo);
             detalle.ShowDialog();
+        }
+
+        private void frmBuscar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
