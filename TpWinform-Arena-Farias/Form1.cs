@@ -141,7 +141,7 @@ namespace TpWinform_Arena_Farias
             }
             else
             {
-                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //arreglado con el System.NullReferenceExcepti
+                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; 
                 service.eliminar(seleccionado);
                 cargar();
             }

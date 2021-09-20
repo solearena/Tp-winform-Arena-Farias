@@ -46,20 +46,44 @@ namespace TpWinform_Arena_Farias
                 articulo.CodigoArticulo = listaArticulo[i].CodigoArticulo;
                 i = 0;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("NO EXISTE EL ID A BUSCAR");
             }
         }
+        private bool existe(int id)
+        {
+            ArticuloService service = new ArticuloService();
+           
+            listaArticulo = service.listar();
+            int i = 0;
+            while (id != listaArticulo[i].Id)
+            {
+                i++;
+            }
+            if(listaArticulo[i].Id == id)
+            {
+             return true;
+            }
+            return false;
+        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             articulo = new Articulo();
+            bool chequear;
             articulo.Id = int.Parse(txtCodigo.Text);
-            ArticuloService negocio = new ArticuloService();
             cargar(articulo.Id);
-            //negocio.buscar(articulo.Id);
-            FormDetalle detalle = new FormDetalle(articulo);
-            detalle.ShowDialog();
+            chequear = existe(articulo.Id);
+            if(chequear == true)
+            {
+                FormDetalle detalle = new FormDetalle(articulo);
+                detalle.ShowDialog();
+
+            }
+            else
+            {
+                Close();
+            }
         }
 
         private void frmBuscar_Load(object sender, EventArgs e)

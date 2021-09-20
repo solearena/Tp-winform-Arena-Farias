@@ -47,8 +47,10 @@ namespace TpWinform_Arena_Farias
         {
             MarcaService marcaService = new MarcaService();
             CategoriaService categoriaService = new CategoriaService();
+            
             try
             {
+                
                 if (articulo != null)
                 {
                     txtCodigo.Text = articulo.CodigoArticulo;
@@ -68,6 +70,7 @@ namespace TpWinform_Arena_Farias
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+                Close();
             }
         }
 
