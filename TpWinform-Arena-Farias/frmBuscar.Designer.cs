@@ -38,24 +38,24 @@ namespace TpWinform_Arena_Farias
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(40, 33);
+            this.lblCodigo.Location = new System.Drawing.Point(47, 33);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(116, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(133, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "INGRESE EL CODIGO";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(175, 30);
+            this.txtCodigo.Location = new System.Drawing.Point(204, 30);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(116, 20);
             this.txtCodigo.TabIndex = 1;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(43, 76);
+            this.btnBuscar.Location = new System.Drawing.Point(50, 76);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(111, 38);
+            this.btnBuscar.Size = new System.Drawing.Size(129, 38);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@ namespace TpWinform_Arena_Farias
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(175, 76);
+            this.btnCancelar.Location = new System.Drawing.Point(204, 76);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(111, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(129, 38);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -73,14 +73,15 @@ namespace TpWinform_Arena_Farias
             // 
             // frmBuscar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(344, 166);
+            this.ClientSize = new System.Drawing.Size(401, 166);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmBuscar";
             this.Text = "Buscar";
             this.ResumeLayout(false);

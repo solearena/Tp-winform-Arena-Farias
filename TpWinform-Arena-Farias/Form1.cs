@@ -61,8 +61,17 @@ namespace TpWinform_Arena_Farias
 
         private void dgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.ImagenUrl);
+            Articulo seleccionado = new Articulo();
+            try
+            {
+                seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.ImagenUrl);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -123,6 +132,21 @@ namespace TpWinform_Arena_Farias
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloService service = new ArticuloService();
+            try
+            {
+                Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem; //arreglado con el System.NullReferenceExcepti
+                service.eliminar(seleccionado);
+                cargar();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ERROR");
+            }
         }
     }
 }

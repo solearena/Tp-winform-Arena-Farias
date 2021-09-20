@@ -31,20 +31,38 @@ namespace negocio
                 {
                     Articulo aux = new Articulo();
                     aux.Id = (int)lector["Id"];
-                    aux.CodigoArticulo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["Descripcion"];
-                    aux.Precio = Math.Round((decimal)lector["Precio"],2); 
+                    if (!(lector["Codigo"] is DBNull))
+                    {
+                        aux.CodigoArticulo = (string)lector["Codigo"];
+                    }
+                    if(!(lector["Nombre"] is DBNull))
+                    {
+                        aux.Nombre = (string)lector["Nombre"];
+                    }
+                    if(!(lector["Descripcion"] is DBNull))
+                    {
+                        aux.Descripcion = (string)lector["Descripcion"];
+                    }
+                    if (!(lector["Precio"] is DBNull))
+                    {
+                        aux.Precio = Math.Round((decimal)lector["Precio"],2); 
+                    }
                     if (!(lector["ImagenUrl"] is DBNull))
                     {
                         aux.ImagenUrl = (string)lector["ImagenUrl"];
                     }
                     aux.DescripcionMarca = new Marca();
-                    aux.DescripcionMarca.Id = (int)lector["IdMarca"];
-                    aux.DescripcionMarca.Descripcion = (string)lector["Marca"];
+                    if (!(lector["IdMarca"] is DBNull))
+                    {
+                        aux.DescripcionMarca.Id = (int)lector["IdMarca"];
+                        aux.DescripcionMarca.Descripcion = (string)lector["Marca"];
+                    }
                     aux.DescripcionCategoria = new Categoria();
-                    aux.DescripcionCategoria.Id = (int)lector["IdCategoria"];
-                    aux.DescripcionCategoria.Descripcion = (string)lector["Categoria"];
+                    if (!(lector["IdCategoria"] is DBNull))
+                    {
+                        aux.DescripcionCategoria.Id = (int)lector["IdCategoria"];
+                        aux.DescripcionCategoria.Descripcion = (string)lector["Categoria"];
+                    }
                     lista.Add(aux);
 
                 }
@@ -103,7 +121,25 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-
+        public void eliminar(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @Id");
+                datos.setearParametro("@id", art.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        
     }
     
 }

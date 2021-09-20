@@ -52,90 +52,90 @@ namespace TpWinform_Arena_Farias
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 43);
+            this.label1.Location = new System.Drawing.Point(54, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "CODIGO";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 74);
+            this.label2.Location = new System.Drawing.Point(54, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "NOMBRE";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 105);
+            this.label3.Location = new System.Drawing.Point(54, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "DESCRIPCION";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 135);
+            this.label4.Location = new System.Drawing.Point(54, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "PRECIO";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 191);
+            this.label5.Location = new System.Drawing.Point(54, 191);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "MARCA";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 221);
+            this.label6.Location = new System.Drawing.Point(54, 221);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "CATEGORIA";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(135, 40);
+            this.txtCodigo.Location = new System.Drawing.Point(157, 40);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(120, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(139, 20);
             this.txtCodigo.TabIndex = 0;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(135, 71);
+            this.txtNombre.Location = new System.Drawing.Point(157, 71);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(120, 20);
+            this.txtNombre.Size = new System.Drawing.Size(139, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(135, 105);
+            this.txtDescripcion.Location = new System.Drawing.Point(157, 105);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(120, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(139, 20);
             this.txtDescripcion.TabIndex = 2;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(134, 135);
+            this.txtPrecio.Location = new System.Drawing.Point(156, 135);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(120, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(139, 20);
             this.txtPrecio.TabIndex = 3;
             // 
             // btnAgregar2
             // 
-            this.btnAgregar2.Location = new System.Drawing.Point(40, 263);
+            this.btnAgregar2.Location = new System.Drawing.Point(47, 263);
             this.btnAgregar2.Name = "btnAgregar2";
-            this.btnAgregar2.Size = new System.Drawing.Size(104, 35);
+            this.btnAgregar2.Size = new System.Drawing.Size(121, 35);
             this.btnAgregar2.TabIndex = 7;
             this.btnAgregar2.Text = "Aceptar";
             this.btnAgregar2.UseVisualStyleBackColor = true;
@@ -143,9 +143,9 @@ namespace TpWinform_Arena_Farias
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(190, 263);
+            this.btnCancelar.Location = new System.Drawing.Point(222, 263);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(104, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(121, 35);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -155,51 +155,51 @@ namespace TpWinform_Arena_Farias
             // 
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(134, 191);
+            this.cboMarca.Location = new System.Drawing.Point(156, 191);
             this.cboMarca.Name = "cboMarca";
-            this.cboMarca.Size = new System.Drawing.Size(121, 21);
+            this.cboMarca.Size = new System.Drawing.Size(140, 21);
             this.cboMarca.TabIndex = 5;
             // 
             // cboCategoria
             // 
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(134, 221);
+            this.cboCategoria.Location = new System.Drawing.Point(156, 221);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cboCategoria.Size = new System.Drawing.Size(140, 21);
             this.cboCategoria.TabIndex = 6;
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(134, 162);
+            this.txtUrlImagen.Location = new System.Drawing.Point(156, 162);
             this.txtUrlImagen.Name = "txtUrlImagen";
-            this.txtUrlImagen.Size = new System.Drawing.Size(120, 20);
+            this.txtUrlImagen.Size = new System.Drawing.Size(139, 20);
             this.txtUrlImagen.TabIndex = 4;
             // 
             // lblUrlImagen
             // 
             this.lblUrlImagen.AutoSize = true;
-            this.lblUrlImagen.Location = new System.Drawing.Point(46, 162);
+            this.lblUrlImagen.Location = new System.Drawing.Point(54, 162);
             this.lblUrlImagen.Name = "lblUrlImagen";
-            this.lblUrlImagen.Size = new System.Drawing.Size(74, 13);
+            this.lblUrlImagen.Size = new System.Drawing.Size(84, 13);
             this.lblUrlImagen.TabIndex = 16;
             this.lblUrlImagen.Text = "URL IMAGEN";
             // 
             // pbxImagen2
             // 
-            this.pbxImagen2.Location = new System.Drawing.Point(339, 40);
+            this.pbxImagen2.Location = new System.Drawing.Point(395, 40);
             this.pbxImagen2.Name = "pbxImagen2";
-            this.pbxImagen2.Size = new System.Drawing.Size(238, 202);
+            this.pbxImagen2.Size = new System.Drawing.Size(278, 202);
             this.pbxImagen2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagen2.TabIndex = 18;
             this.pbxImagen2.TabStop = false;
             // 
             // frmAgregar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(611, 338);
+            this.ClientSize = new System.Drawing.Size(713, 338);
             this.Controls.Add(this.pbxImagen2);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblUrlImagen);
@@ -217,6 +217,7 @@ namespace TpWinform_Arena_Farias
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "frmAgregar";
             this.Text = "Agregar Articulo";
